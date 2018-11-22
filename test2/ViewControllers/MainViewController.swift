@@ -45,11 +45,14 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.continueSession()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        pauseSession()
+        
+        self.pauseSession()
     }
     
     func initializeSceneView() {
@@ -94,8 +97,10 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         // get access to scene from scene assets and parse for the lamp model
         let tempScene = SCNScene(named: "art.scnassets/carpet/carpet.dae")!
         self.carpetNode = tempScene.rootNode.childNodes[0]
+        self.carpetNode?.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+//        self.carpetNode?.simdScale = simd_float3(1, 1, 1)
         self.carpetNode?.rotation = SCNVector4Make(.pi / 2, 0, 0, 0)
-        self.carpetNode?.childNodes[0].geometry?.firstMaterial?.lightingModel = .physicallyBased
+        self.carpetNode?.childNodes[0].geometry?.firstMaterial?.lightingModel = .phong
         self.carpetNode?.childNodes[0].geometry?.firstMaterial?.diffuse.contents = Helper.images[Helper.selectedIndex]
         
 //        UIImage(named: "art.scnassets/carpet/carpet 1.jpg")
@@ -152,6 +157,20 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
             let newLampNode = self.carpetNode?.clone()
             if let newLampNode = newLampNode {
                 newLampNode.position = location
+                switch Helper.selectedIndex {
+                case 0:
+                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+                case 1:
+                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
+                case 2:
+                    newLampNode.childNodes[0].scale = SCNVector3(0.86, 0.86, 0.86)
+                case 3:
+                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
+                case 4:
+                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                default:
+                    return
+                }
                 self.sceneView.scene.rootNode.addChildNode(newLampNode)
             }
     }
@@ -274,9 +293,18 @@ extension MainViewController: ListViewContrllerDelegate {
         self.carpetNode?.childNodes[0].geometry?.firstMaterial?.diffuse.contents = Helper.images[Helper.selectedIndex]
         
         if self.sceneView.scene.rootNode.childNodes.count > 3, self.isAdded {
-             let position = self.sceneView.scene.rootNode.childNodes[3].position
-            self.sceneView.scene.rootNode.childNodes[3].removeFromParentNode()
-            addNodeAtLocation(location: position)
+            guard let lastNode = self.sceneView.scene.rootNode.childNodes.last else {
+                return
+            }
+            
+            let position = lastNode.position
+            
+            for _ in 4...self.sceneView.scene.rootNode.childNodes.count {
+                self.sceneView.scene.rootNode.childNodes.last?.removeFromParentNode()
+            }
+            
+//            self.sceneView.scene.rootNode.childNodes[3].removeFromParentNode()
+            self.addNodeAtLocation(location: position)
         }
     }
 }

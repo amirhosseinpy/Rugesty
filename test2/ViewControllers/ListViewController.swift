@@ -32,6 +32,20 @@ class ListViewContrller: UIViewController {
         cell.carpetImageView.image = Helper.images[index]
         cell.detailButton.layer.cornerRadius = 5.0
         cell.priceButton.layer.cornerRadius = 5.0
+        
+        let detailGesture = UITapGestureRecognizer(target: self, action: #selector(self.onDetailTapped(_:)))
+        cell.detailButton.tag = index
+        cell.detailButton.addGestureRecognizer(detailGesture)
+        cell.detailButton.isUserInteractionEnabled = true
+    }
+    
+    @objc func onDetailTapped(_ gesture: UITapGestureRecognizer) {
+        let story = UIStoryboard(name: "Main", bundle: self.nibBundle)
+        
+        if let view = gesture.view, let viewController = story.instantiateViewController(withIdentifier: "detailViewController") as? DetailViewController {
+            viewController.index = view.tag
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
 }
 
