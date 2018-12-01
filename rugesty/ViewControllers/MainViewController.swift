@@ -15,6 +15,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
 //    @IBOutlet weak var listViewBottomConst: NSLayoutConstraint!
     
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var slider: UISlider!
     
     var listView: UIView!
     var backgroundColoredView: UIView!
@@ -24,6 +25,10 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
     var isAdded = false
     var lightNodes = [SCNNode]()
     var lastYAxis: CGFloat = 0
+    var isTrackingNormal = false
+    var objectAnchor: ARAnchor?
+    let updateQueue = DispatchQueue(label: "com.pooya.test32")
+    var detectedPlanes: [String : SCNNode] = [:]
     
     var chosingMode: Bool = false {
         didSet {
@@ -35,6 +40,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: Notification.Name.UIApplicationWillResignActive, object: nil)
         self.initializeSceneView()
         Helper.setupImages()
         self.loadNodeObject()
@@ -100,7 +106,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.carpetNode?.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
 //        self.carpetNode?.simdScale = simd_float3(1, 1, 1)
         self.carpetNode?.rotation = SCNVector4Make(.pi / 2, 0, 0, 0)
-        self.carpetNode?.childNodes[0].geometry?.firstMaterial?.lightingModel = .phong
+        self.carpetNode?.childNodes[0].geometry?.firstMaterial?.lightingModel = .physicallyBased
         self.carpetNode?.childNodes[0].geometry?.firstMaterial?.diffuse.contents = Helper.images[Helper.selectedIndex]
         
 //        UIImage(named: "art.scnassets/carpet/carpet 1.jpg")
@@ -127,6 +133,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         //currenly only planeDetection available is horizontal.
         self.configuration!.planeDetection = ARWorldTrackingConfiguration.PlaneDetection.horizontal
         self.sceneView.session.run(self.configuration!, options: [ARSession.RunOptions.removeExistingAnchors, ARSession.RunOptions.resetTracking])
+        self.sceneView.debugOptions  = [.showFeaturePoints]
     }
     
     func pauseSession() {
@@ -137,6 +144,25 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView.session.run(self.configuration!)
     }
     
+    @objc func willResignActive(_ notification: Notification) {
+        guard self.sceneView.scene.rootNode.childNodes.count > 3, self.isAdded else {
+            return
+        }
+        
+        guard let _ = self.sceneView.scene.rootNode.childNodes.last else {
+            return
+        }
+        
+        for _ in 4...self.sceneView.scene.rootNode.childNodes.count {
+            self.sceneView.scene.rootNode.childNodes.last?.removeFromParentNode()
+        }
+        
+        self.isAdded = false
+        self.sceneView.debugOptions  = [ARSCNDebugOptions.showFeaturePoints]
+        
+    }
+
+    
     func addNodeAtLocation(location: CGPoint) {
         let hitResults = self.sceneView.hitTest(location, types: .existingPlaneUsingExtent)
         if hitResults.count > 0 {
@@ -146,7 +172,10 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
             let newLampNode = self.carpetNode?.clone()
             if let newLampNode = newLampNode {
                 newLampNode.position = newLocation
-                self.sceneView.scene.rootNode.addChildNode(newLampNode)
+                updateQueue.async {
+                    self.sceneView.scene.rootNode.addChildNode(newLampNode)
+                    self.addOrUpdateAnchor(for: newLampNode)
+                }
                 self.sceneView.debugOptions  = []
 //                self.addLightNodeTo(newLampNode, position: newLocation)
             }
@@ -171,8 +200,22 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
                 default:
                     return
                 }
+                let yAxis = CGFloat(self.slider.value)
+                newLampNode.runAction(SCNAction.rotateTo(x: CGFloat(newLampNode.eulerAngles.x), y: yAxis, z: CGFloat(newLampNode.eulerAngles.z), duration: 0.0))
                 self.sceneView.scene.rootNode.addChildNode(newLampNode)
             }
+    }
+    
+    func addOrUpdateAnchor(for object: SCNNode) {
+        // If the anchor is not nil, remove it from the session.
+        if let anchor = self.objectAnchor {
+            self.sceneView.session.remove(anchor: anchor)
+        }
+        
+        // Create a new anchor with the object's current transform and add it to the session
+        let newAnchor = ARAnchor(transform: object.simdWorldTransform)
+        self.objectAnchor = newAnchor
+        self.sceneView.session.add(anchor: newAnchor)
     }
     
     func updateLightNodesLightEstimation() {
@@ -238,7 +281,6 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         }
         
         let yAxis = CGFloat(sender.value)
-        print(lastYAxis)
         carpetNode.runAction(SCNAction.rotateTo(x: CGFloat(carpetNode.eulerAngles.x), y: yAxis, z: CGFloat(carpetNode.eulerAngles.z), duration: 0.2))
     }
     
@@ -272,9 +314,49 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.updateLightNodesLightEstimation()
     }
     
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        // 1
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        // 2
+        let plane = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
+        let planeNode = SCNNode(geometry: plane)
+        planeNode.position = SCNVector3Make(planeAnchor.center.x,
+                                            planeAnchor.center.y,
+                                            planeAnchor.center.z)
+        // 3
+        planeNode.opacity = 0.0
+        // 4
+        planeNode.rotation = SCNVector4Make(1, 0, 0, -Float.pi / 2.0)
+        node.addChildNode(planeNode)
+        // 5
+        detectedPlanes[planeAnchor.identifier.uuidString] = planeNode
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        // 1
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        // 2
+        guard let planeNode = detectedPlanes[planeAnchor.identifier.uuidString] else { return }
+        let planeGeometry = planeNode.geometry as! SCNPlane
+        planeGeometry.width = CGFloat(planeAnchor.extent.x)
+        planeGeometry.height = CGFloat(planeAnchor.extent.z)
+        planeNode.position = SCNVector3Make(planeAnchor.center.x,
+                                            planeAnchor.center.y,
+                                            planeAnchor.center.z)
+    }
+    
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
         
+    }
+    
+    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+        switch camera.trackingState {
+        case .normal:
+            self.isTrackingNormal = true
+        default:
+            self.isTrackingNormal = false
+        }
     }
     
     func sessionWasInterrupted(_ session: ARSession) {

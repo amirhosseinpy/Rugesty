@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		668AE4A72154DB13002A09B4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		66C84BA3210B065E0095AEB0 /* test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C84BA3210B065E0095AEB0 /* Rugesty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rugesty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C84BA6210B065E0095AEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C84BA8210B065E0095AEB0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		66C84BAA210B065E0095AEB0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -51,10 +51,10 @@
 		66C84BAF210B065F0095AEB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C84BB2210B065F0095AEB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66C84BB4210B065F0095AEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66C84BB9210B065F0095AEB0 /* test2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C84BB9210B065F0095AEB0 /* RugestyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RugestyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C84BBD210B065F0095AEB0 /* test2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2Tests.swift; sourceTree = "<group>"; };
 		66C84BBF210B065F0095AEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66C84BC4210B065F0095AEB0 /* test2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C84BC4210B065F0095AEB0 /* RugestyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RugestyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C84BC8210B065F0095AEB0 /* test2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2UITests.swift; sourceTree = "<group>"; };
 		66C84BCA210B065F0095AEB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66E9F5FB21551DD200146897 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		66C84B9A210B065D0095AEB0 = {
 			isa = PBXGroup;
 			children = (
-				66C84BA5210B065E0095AEB0 /* test2 */,
+				66C84BA5210B065E0095AEB0 /* rugesty */,
 				66C84BBC210B065F0095AEB0 /* test2Tests */,
 				66C84BC7210B065F0095AEB0 /* test2UITests */,
 				66C84BA4210B065E0095AEB0 /* Products */,
@@ -103,14 +103,14 @@
 		66C84BA4210B065E0095AEB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66C84BA3210B065E0095AEB0 /* test2.app */,
-				66C84BB9210B065F0095AEB0 /* test2Tests.xctest */,
-				66C84BC4210B065F0095AEB0 /* test2UITests.xctest */,
+				66C84BA3210B065E0095AEB0 /* Rugesty.app */,
+				66C84BB9210B065F0095AEB0 /* RugestyTests.xctest */,
+				66C84BC4210B065F0095AEB0 /* RugestyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66C84BA5210B065E0095AEB0 /* test2 */ = {
+		66C84BA5210B065E0095AEB0 /* rugesty */ = {
 			isa = PBXGroup;
 			children = (
 				66E9F5FA21551DBF00146897 /* Util */,
@@ -122,7 +122,7 @@
 				66C84BB4210B065F0095AEB0 /* Info.plist */,
 				66E9F601215559C500146897 /* Carpet.swift */,
 			);
-			path = test2;
+			path = rugesty;
 			sourceTree = "<group>";
 		};
 		66C84BBC210B065F0095AEB0 /* test2Tests */ = {
@@ -184,9 +184,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66C84BA2210B065E0095AEB0 /* test2 */ = {
+		66C84BA2210B065E0095AEB0 /* Rugesty */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "test2" */;
+			buildConfigurationList = 66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "Rugesty" */;
 			buildPhases = (
 				66C84B9F210B065E0095AEB0 /* Sources */,
 				66C84BA0210B065E0095AEB0 /* Frameworks */,
@@ -196,14 +196,14 @@
 			);
 			dependencies = (
 			);
-			name = test2;
+			name = Rugesty;
 			productName = test2;
-			productReference = 66C84BA3210B065E0095AEB0 /* test2.app */;
+			productReference = 66C84BA3210B065E0095AEB0 /* Rugesty.app */;
 			productType = "com.apple.product-type.application";
 		};
-		66C84BB8210B065F0095AEB0 /* test2Tests */ = {
+		66C84BB8210B065F0095AEB0 /* RugestyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66C84BD0210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "test2Tests" */;
+			buildConfigurationList = 66C84BD0210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "RugestyTests" */;
 			buildPhases = (
 				66C84BB5210B065F0095AEB0 /* Sources */,
 				66C84BB6210B065F0095AEB0 /* Frameworks */,
@@ -214,14 +214,14 @@
 			dependencies = (
 				66C84BBB210B065F0095AEB0 /* PBXTargetDependency */,
 			);
-			name = test2Tests;
+			name = RugestyTests;
 			productName = test2Tests;
-			productReference = 66C84BB9210B065F0095AEB0 /* test2Tests.xctest */;
+			productReference = 66C84BB9210B065F0095AEB0 /* RugestyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		66C84BC3210B065F0095AEB0 /* test2UITests */ = {
+		66C84BC3210B065F0095AEB0 /* RugestyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66C84BD3210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "test2UITests" */;
+			buildConfigurationList = 66C84BD3210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "RugestyUITests" */;
 			buildPhases = (
 				66C84BC0210B065F0095AEB0 /* Sources */,
 				66C84BC1210B065F0095AEB0 /* Frameworks */,
@@ -232,9 +232,9 @@
 			dependencies = (
 				66C84BC6210B065F0095AEB0 /* PBXTargetDependency */,
 			);
-			name = test2UITests;
+			name = RugestyUITests;
 			productName = test2UITests;
-			productReference = 66C84BC4210B065F0095AEB0 /* test2UITests.xctest */;
+			productReference = 66C84BC4210B065F0095AEB0 /* RugestyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -260,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 66C84B9E210B065D0095AEB0 /* Build configuration list for PBXProject "test2" */;
+			buildConfigurationList = 66C84B9E210B065D0095AEB0 /* Build configuration list for PBXProject "Rugesty" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -273,9 +273,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66C84BA2210B065E0095AEB0 /* test2 */,
-				66C84BB8210B065F0095AEB0 /* test2Tests */,
-				66C84BC3210B065F0095AEB0 /* test2UITests */,
+				66C84BA2210B065E0095AEB0 /* Rugesty */,
+				66C84BB8210B065F0095AEB0 /* RugestyTests */,
+				66C84BC3210B065F0095AEB0 /* RugestyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -346,12 +346,12 @@
 /* Begin PBXTargetDependency section */
 		66C84BBB210B065F0095AEB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66C84BA2210B065E0095AEB0 /* test2 */;
+			target = 66C84BA2210B065E0095AEB0 /* Rugesty */;
 			targetProxy = 66C84BBA210B065F0095AEB0 /* PBXContainerItemProxy */;
 		};
 		66C84BC6210B065F0095AEB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66C84BA2210B065E0095AEB0 /* test2 */;
+			target = 66C84BA2210B065E0095AEB0 /* Rugesty */;
 			targetProxy = 66C84BC5210B065F0095AEB0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -496,12 +496,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UGM9RU5T36;
-				INFOPLIST_FILE = test2/Info.plist;
+				INFOPLIST_FILE = rugesty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.test32;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rugesty.rugesty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,12 +514,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UGM9RU5T36;
-				INFOPLIST_FILE = test2/Info.plist;
+				INFOPLIST_FILE = rugesty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.test32;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rugesty.rugesty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,7 +543,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test2.app/test2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rugesty.app/Rugesty";
 			};
 			name = Debug;
 		};
@@ -564,7 +564,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test2.app/test2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rugesty.app/Rugesty";
 			};
 			name = Release;
 		};
@@ -611,7 +611,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		66C84B9E210B065D0095AEB0 /* Build configuration list for PBXProject "test2" */ = {
+		66C84B9E210B065D0095AEB0 /* Build configuration list for PBXProject "Rugesty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66C84BCB210B065F0095AEB0 /* Debug */,
@@ -620,7 +620,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "test2" */ = {
+		66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "Rugesty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66C84BCE210B065F0095AEB0 /* Debug */,
@@ -629,7 +629,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66C84BD0210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "test2Tests" */ = {
+		66C84BD0210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "RugestyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66C84BD1210B065F0095AEB0 /* Debug */,
@@ -638,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66C84BD3210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "test2UITests" */ = {
+		66C84BD3210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "RugestyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66C84BD4210B065F0095AEB0 /* Debug */,
