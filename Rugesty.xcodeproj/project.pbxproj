@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66369EF021B8474500919C09 /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66369EEF21B8474500919C09 /* IRANSansMobile_Bold.ttf */; };
+		66369EF521B9194600919C09 /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66369EF421B9194600919C09 /* Base.strings */; };
+		66369EF721B91ECD00919C09 /* LangUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66369EF621B91ECD00919C09 /* LangUtil.swift */; };
+		66369EF921B9300A00919C09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66369EF821B9300A00919C09 /* Constants.swift */; };
 		668AE4A82154DB13002A09B4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AE4A72154DB13002A09B4 /* Helper.swift */; };
 		66C84BA7210B065E0095AEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84BA6210B065E0095AEB0 /* AppDelegate.swift */; };
 		66C84BA9210B065E0095AEB0 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C84BA8210B065E0095AEB0 /* art.scnassets */; };
@@ -42,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66369EEF21B8474500919C09 /* IRANSansMobile_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Bold.ttf; sourceTree = "<group>"; };
+		66369EF121B8475000919C09 /* IRANSansMobile_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Light.ttf; sourceTree = "<group>"; };
+		66369EF221B8475900919C09 /* IRANSansMobile_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Medium.ttf; sourceTree = "<group>"; };
+		66369EF321B8476300919C09 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
+		66369EF421B9194600919C09 /* Base.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Base.strings; sourceTree = "<group>"; };
+		66369EF621B91ECD00919C09 /* LangUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangUtil.swift; sourceTree = "<group>"; };
+		66369EF821B9300A00919C09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		668AE4A72154DB13002A09B4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		66C84BA3210B065E0095AEB0 /* Rugesty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rugesty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C84BA6210B065E0095AEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +101,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66369EED21B8470C00919C09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66369EEE21B8472C00919C09 /* Fonts */,
+				66C84BAF210B065F0095AEB0 /* Assets.xcassets */,
+				66C84BA8210B065E0095AEB0 /* art.scnassets */,
+				66369EF421B9194600919C09 /* Base.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66369EEE21B8472C00919C09 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				66369EEF21B8474500919C09 /* IRANSansMobile_Bold.ttf */,
+				66369EF121B8475000919C09 /* IRANSansMobile_Light.ttf */,
+				66369EF221B8475900919C09 /* IRANSansMobile_Medium.ttf */,
+				66369EF321B8476300919C09 /* IRANSansMobile.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		66C84B9A210B065D0095AEB0 = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +150,7 @@
 				66FCBCDC214D7298003F72F5 /* Cells */,
 				66FCBCD5214BD904003F72F5 /* ViewControllers */,
 				66FCBCD4214BD8E8003F72F5 /* Storyboard */,
-				66C84BAF210B065F0095AEB0 /* Assets.xcassets */,
-				66C84BA8210B065E0095AEB0 /* art.scnassets */,
+				66369EED21B8470C00919C09 /* Resources */,
 				66C84BB4210B065F0095AEB0 /* Info.plist */,
 				66E9F601215559C500146897 /* Carpet.swift */,
 			);
@@ -148,6 +180,8 @@
 			children = (
 				668AE4A72154DB13002A09B4 /* Helper.swift */,
 				66E9F5FB21551DD200146897 /* Extension.swift */,
+				66369EF621B91ECD00919C09 /* LangUtil.swift */,
+				66369EF821B9300A00919C09 /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -285,6 +319,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66369EF021B8474500919C09 /* IRANSansMobile_Bold.ttf in Resources */,
+				66369EF521B9194600919C09 /* Base.strings in Resources */,
 				66C84BA9210B065E0095AEB0 /* art.scnassets in Resources */,
 				66C84BB3210B065F0095AEB0 /* LaunchScreen.storyboard in Resources */,
 				66C84BB0210B065F0095AEB0 /* Assets.xcassets in Resources */,
@@ -314,12 +350,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E9F602215559C500146897 /* Carpet.swift in Sources */,
+				66369EF921B9300A00919C09 /* Constants.swift in Sources */,
 				66C84BAB210B065E0095AEB0 /* MainViewController.swift in Sources */,
 				66C84BA7210B065E0095AEB0 /* AppDelegate.swift in Sources */,
 				668AE4A82154DB13002A09B4 /* Helper.swift in Sources */,
 				66E9F5FC21551DD200146897 /* Extension.swift in Sources */,
 				66FCBCDB214D727B003F72F5 /* CarpetListCell.swift in Sources */,
 				66E9F5FE2155530100146897 /* DetailCell.swift in Sources */,
+				66369EF721B91ECD00919C09 /* LangUtil.swift in Sources */,
 				66FCBCD7214BE0A6003F72F5 /* ListViewController.swift in Sources */,
 				66E9F6002155532600146897 /* DetailViewController.swift in Sources */,
 			);

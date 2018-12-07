@@ -16,23 +16,40 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var guideLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var labelHeightCons: NSLayoutConstraint!
     
     var listView: UIView!
     var backgroundColoredView: UIView!
     var configuration : ARWorldTrackingConfiguration?
     var carpetNode: SCNNode?
     var anchors = [ARAnchor]()
-    var isAdded = false
     var lightNodes = [SCNNode]()
     var lastYAxis: CGFloat = 0
-    var isTrackingNormal = false
     var objectAnchor: ARAnchor?
-    let updateQueue = DispatchQueue(label: "com.pooya.test32")
+    let updateQueue = DispatchQueue(label: "com.pooya.rugesty")
     var detectedPlanes: [String : SCNNode] = [:]
     
     var chosingMode: Bool = false {
         didSet {
             self.backgroundColoredView.isHidden = !self.chosingMode
+        }
+    }
+    
+    var isTrackingNormal = false {
+        didSet {
+            if !self.isTrackingNormal {
+                self.trackingIsNotNormal()
+            } else {
+                self.trackingIsInNormalMode()
+            }
+        }
+    }
+    
+    var isAdded = false {
+        didSet {
+            self.slider.isHidden = !self.isAdded
         }
     }
         
@@ -92,6 +109,8 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.backgroundColoredView.backgroundColor = UIColor.blue.withAlphaComponent(0.1)
         let backgroundGesture = UITapGestureRecognizer(target: self, action: #selector(self.onBackgroundTapped))
         self.backgroundColoredView.addGestureRecognizer(backgroundGesture)
+        
+        self.guideLabel.backgroundColor = UIColor.white.withAlphaComponent(0.5)
     }
     
     func getList() -> ListViewContrller {
@@ -108,11 +127,6 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.carpetNode?.rotation = SCNVector4Make(.pi / 2, 0, 0, 0)
         self.carpetNode?.childNodes[0].geometry?.firstMaterial?.lightingModel = .physicallyBased
         self.carpetNode?.childNodes[0].geometry?.firstMaterial?.diffuse.contents = Helper.images[Helper.selectedIndex]
-        
-//        UIImage(named: "art.scnassets/carpet/carpet 1.jpg")
-//        self.carpetNode?.addChildNode(getLightNode())
-//        self.carpetNode?.eulerAngles = SCNVector3Make(-.pi/2, 0, 0)
-        //        (withName: "carpet", recursively: true)!
     }
     
     func getLightNode(position: SCNVector3) -> SCNNode {
@@ -144,22 +158,17 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView.session.run(self.configuration!)
     }
     
-    @objc func willResignActive(_ notification: Notification) {
-        guard self.sceneView.scene.rootNode.childNodes.count > 3, self.isAdded else {
-            return
-        }
-        
-        guard let _ = self.sceneView.scene.rootNode.childNodes.last else {
-            return
-        }
-        
-        for _ in 4...self.sceneView.scene.rootNode.childNodes.count {
-            self.sceneView.scene.rootNode.childNodes.last?.removeFromParentNode()
-        }
-        
-        self.isAdded = false
-        self.sceneView.debugOptions  = [ARSCNDebugOptions.showFeaturePoints]
-        
+    func trackingIsInNormalMode() {
+        self.guideLabel.isHidden = true
+        self.addButton.isHidden = false
+    }
+    
+    func trackingIsNotNormal() {
+        self.guideLabel.text = "walk.arround".localized
+        self.labelHeightCons.constant = "walk.arround".localized.estimatedWidth(withConstrainedHeight: 25, font: Fonts.iranSans(15)) + 10
+        self.guideLabel.isHidden = false
+        self.addButton.isHidden = true
+        Helper.fadeViewInThenOut(view: self.guideLabel, delay: 0.5)
     }
 
     
@@ -296,6 +305,24 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
             self.listView.frame.origin.y += 340
             self.chosingMode = false
         })
+    }
+    
+    @objc func willResignActive(_ notification: Notification) {
+        guard self.sceneView.scene.rootNode.childNodes.count > 3, self.isAdded else {
+            return
+        }
+        
+        guard let _ = self.sceneView.scene.rootNode.childNodes.last else {
+            return
+        }
+        
+        for _ in 4...self.sceneView.scene.rootNode.childNodes.count {
+            self.sceneView.scene.rootNode.childNodes.last?.removeFromParentNode()
+        }
+        
+        self.isAdded = false
+        self.sceneView.debugOptions  = [ARSCNDebugOptions.showFeaturePoints]
+        
     }
     
 

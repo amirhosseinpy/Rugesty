@@ -48,5 +48,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>IRANSansMobile.ttf</string>
+		<string>IRANSansMobile_Bold.ttf</string>
+		<string>IRANSansMobile_Light.ttf</string>
+		<string>IRANSansMobile_Medium.ttf</string>
+	</array>
 </dict>
 </plist>

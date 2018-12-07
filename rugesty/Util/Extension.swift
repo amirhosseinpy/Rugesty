@@ -11,6 +11,21 @@ import UIKit
 
 extension UIView {
     
+    @IBInspectable var
+    cornerRadius: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set {
+            self.layer.cornerRadius = newValue
+            
+            // Don't touch the masksToBound property if a shadow is needed in addition to the cornerRadius
+            if layer.shadowOpacity <= 0.0 {
+                self.layer.masksToBounds = true
+            }
+        }
+    }
+    
     func addShadow(shadowColor: CGColor = UIColor.black.cgColor,
                    shadowOffset: CGSize = CGSize(width: 5.0, height: 5.0),
                    shadowOpacity: Float = 0.4,
@@ -39,5 +54,28 @@ extension UIColor {
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
         
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+}
+
+extension String {
+    func estimatedWidth(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+        
+        return ceil(boundingBox.width)
+    }
+    
+    var localized: String {
+        return NSLocalizedString(self, tableName: FPLangUtil.lang, bundle: Bundle.main, value: "", comment: "")
+    }
+    
+    func localizedWithArgs(_ args: [CVarArg]) -> String {
+        return String(format: self.localized, arguments: args)
+    }
+    
+    var trim: String {
+        return self.trimmingCharacters(
+            in: CharacterSet.whitespacesAndNewlines
+        )
     }
 }
