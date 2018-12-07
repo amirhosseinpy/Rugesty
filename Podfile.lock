@@ -1,0 +1,16 @@
+PODS:
+  - DeckTransition (2.0.0)
+
+DEPENDENCIES:
+  - DeckTransition (~> 2.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DeckTransition
+
+SPEC CHECKSUMS:
+  DeckTransition: 2300694f94fbeca2c103f365dc9dc09ffae14a4f
+
+PODFILE CHECKSUM: c5c7e544d61d2b4a289eee123793dbbd239448b0
+
+COCOAPODS: 1.5.3

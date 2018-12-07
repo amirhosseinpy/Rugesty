@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E85677D92B3B03C9AC096FC /* Pods_Rugesty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2917B02790248A8305BD6 /* Pods_Rugesty.framework */; };
+		52063F8C79471038E457E2C9 /* Pods_RugestyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985FCDB1173CB43610D3116F /* Pods_RugestyTests.framework */; };
 		66369EF021B8474500919C09 /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66369EEF21B8474500919C09 /* IRANSansMobile_Bold.ttf */; };
 		66369EF521B9194600919C09 /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66369EF421B9194600919C09 /* Base.strings */; };
 		66369EF721B91ECD00919C09 /* LangUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66369EF621B91ECD00919C09 /* LangUtil.swift */; };
@@ -26,6 +28,7 @@
 		66E9F602215559C500146897 /* Carpet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9F601215559C500146897 /* Carpet.swift */; };
 		66FCBCD7214BE0A6003F72F5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBCD6214BE0A6003F72F5 /* ListViewController.swift */; };
 		66FCBCDB214D727B003F72F5 /* CarpetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FCBCDA214D727B003F72F5 /* CarpetListCell.swift */; };
+		A66824FE5FD25BB4DDD61513 /* Pods_RugestyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A7D25B1F9E9DE325A0A485 /* Pods_RugestyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33A7D25B1F9E9DE325A0A485 /* Pods_RugestyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RugestyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66369EEF21B8474500919C09 /* IRANSansMobile_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Bold.ttf; sourceTree = "<group>"; };
 		66369EF121B8475000919C09 /* IRANSansMobile_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Light.ttf; sourceTree = "<group>"; };
 		66369EF221B8475900919C09 /* IRANSansMobile_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Medium.ttf; sourceTree = "<group>"; };
@@ -74,6 +78,14 @@
 		66E9F601215559C500146897 /* Carpet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carpet.swift; sourceTree = "<group>"; };
 		66FCBCD6214BE0A6003F72F5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		66FCBCDA214D727B003F72F5 /* CarpetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpetListCell.swift; sourceTree = "<group>"; };
+		720CA7129B63DAE263DF1225 /* Pods-RugestyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RugestyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RugestyTests/Pods-RugestyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7705C4B8E5CD585E44C8413E /* Pods-RugestyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RugestyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RugestyUITests/Pods-RugestyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		77903103CB9C181A6CB65D5E /* Pods-Rugesty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rugesty.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rugesty/Pods-Rugesty.release.xcconfig"; sourceTree = "<group>"; };
+		88A2B653620714070A279EF3 /* Pods-RugestyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RugestyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RugestyTests/Pods-RugestyTests.release.xcconfig"; sourceTree = "<group>"; };
+		985FCDB1173CB43610D3116F /* Pods_RugestyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RugestyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D89E4871509ED3CE5913A1 /* Pods-Rugesty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rugesty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rugesty/Pods-Rugesty.debug.xcconfig"; sourceTree = "<group>"; };
+		AAB2917B02790248A8305BD6 /* Pods_Rugesty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rugesty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C53C4D38A11DBB033DD0F0B3 /* Pods-RugestyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RugestyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RugestyUITests/Pods-RugestyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E85677D92B3B03C9AC096FC /* Pods_Rugesty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52063F8C79471038E457E2C9 /* Pods_RugestyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,12 +109,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66824FE5FD25BB4DDD61513 /* Pods_RugestyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13183D5F00B0820A112F1E70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5D89E4871509ED3CE5913A1 /* Pods-Rugesty.debug.xcconfig */,
+				77903103CB9C181A6CB65D5E /* Pods-Rugesty.release.xcconfig */,
+				720CA7129B63DAE263DF1225 /* Pods-RugestyTests.debug.xcconfig */,
+				88A2B653620714070A279EF3 /* Pods-RugestyTests.release.xcconfig */,
+				7705C4B8E5CD585E44C8413E /* Pods-RugestyUITests.debug.xcconfig */,
+				C53C4D38A11DBB033DD0F0B3 /* Pods-RugestyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		66369EED21B8470C00919C09 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +158,8 @@
 				66C84BBC210B065F0095AEB0 /* test2Tests */,
 				66C84BC7210B065F0095AEB0 /* test2UITests */,
 				66C84BA4210B065E0095AEB0 /* Products */,
+				13183D5F00B0820A112F1E70 /* Pods */,
+				EFC5E576BB7B48E198E759A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +245,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		EFC5E576BB7B48E198E759A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAB2917B02790248A8305BD6 /* Pods_Rugesty.framework */,
+				985FCDB1173CB43610D3116F /* Pods_RugestyTests.framework */,
+				33A7D25B1F9E9DE325A0A485 /* Pods_RugestyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "Rugesty" */;
 			buildPhases = (
+				BD01DCA506256B1425D40C9A /* [CP] Check Pods Manifest.lock */,
 				66C84B9F210B065E0095AEB0 /* Sources */,
 				66C84BA0210B065E0095AEB0 /* Frameworks */,
 				66C84BA1210B065E0095AEB0 /* Resources */,
+				B1D9B7AE53BDF9EDB3C07DBE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66C84BD0210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "RugestyTests" */;
 			buildPhases = (
+				F8F727C409295DE38AB2B4E3 /* [CP] Check Pods Manifest.lock */,
 				66C84BB5210B065F0095AEB0 /* Sources */,
 				66C84BB6210B065F0095AEB0 /* Frameworks */,
 				66C84BB7210B065F0095AEB0 /* Resources */,
@@ -257,6 +300,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66C84BD3210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "RugestyUITests" */;
 			buildPhases = (
+				A4BE093EBCD4C429A00A76F8 /* [CP] Check Pods Manifest.lock */,
 				66C84BC0210B065F0095AEB0 /* Sources */,
 				66C84BC1210B065F0095AEB0 /* Frameworks */,
 				66C84BC2210B065F0095AEB0 /* Resources */,
@@ -343,6 +387,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4BE093EBCD4C429A00A76F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RugestyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1D9B7AE53BDF9EDB3C07DBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rugesty/Pods-Rugesty-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeckTransition/DeckTransition.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeckTransition.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rugesty/Pods-Rugesty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD01DCA506256B1425D40C9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rugesty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8F727C409295DE38AB2B4E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RugestyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66C84B9F210B065E0095AEB0 /* Sources */ = {
@@ -530,15 +649,13 @@
 		};
 		66C84BCE210B065F0095AEB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5D89E4871509ED3CE5913A1 /* Pods-Rugesty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UGM9RU5T36;
 				INFOPLIST_FILE = rugesty/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rugesty.rugesty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -548,15 +665,13 @@
 		};
 		66C84BCF210B065F0095AEB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77903103CB9C181A6CB65D5E /* Pods-Rugesty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UGM9RU5T36;
 				INFOPLIST_FILE = rugesty/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rugesty.rugesty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -566,17 +681,14 @@
 		};
 		66C84BD1210B065F0095AEB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 720CA7129B63DAE263DF1225 /* Pods-RugestyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 674895MZDB;
 				INFOPLIST_FILE = test2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.test2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -587,17 +699,14 @@
 		};
 		66C84BD2210B065F0095AEB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88A2B653620714070A279EF3 /* Pods-RugestyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 674895MZDB;
 				INFOPLIST_FILE = test2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.test2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -608,16 +717,13 @@
 		};
 		66C84BD4210B065F0095AEB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7705C4B8E5CD585E44C8413E /* Pods-RugestyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 674895MZDB;
 				INFOPLIST_FILE = test2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.test2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -628,16 +734,13 @@
 		};
 		66C84BD5210B065F0095AEB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C53C4D38A11DBB033DD0F0B3 /* Pods-RugestyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 674895MZDB;
 				INFOPLIST_FILE = test2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.test2UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
