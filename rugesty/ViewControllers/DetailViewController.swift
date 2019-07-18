@@ -43,26 +43,25 @@ class DetailViewController: UIViewController {
     func setupCell(cell: DetailCell, index: Int) {
         switch index {
         case 0:
-            cell.keyLabel.text = "نام: "
-            cell.valueLabel.text = carpets[self.index].name
+            cell.keyLabel.text = "design.number.colon".localized
+            cell.valueLabel.text = carpets[self.index].designNo
         case 1:
-            cell.keyLabel.text = "اندازه: "
-            cell.valueLabel.text = carpets[self.index].size
+            cell.keyLabel.text = "background.color.colon".localized
+            cell.valueLabel.text = carpets[self.index].backgroundColor
         case 2:
-            cell.keyLabel.text = "محل بافت: "
-            cell.valueLabel.text = carpets[self.index].texturePlace
+            cell.keyLabel.text = "number.of.color.colon".localized
+            cell.valueLabel.text = "colors".localizedWithArgs(["\(carpets[self.index].numberOfColors ?? 0)"])
         case 3:
-            cell.keyLabel.text = "تراکم: "
+            cell.keyLabel.text = "density.colon".localized
             cell.valueLabel.text = carpets[self.index].density
         case 4:
-            cell.keyLabel.text = "جنس: "
-            cell.valueLabel.text = carpets[self.index].material
+            cell.keyLabel.text = "pile.yarn.colon".localized
+            cell.valueLabel.text = carpets[self.index].pileYarn
         case 5:
-            cell.keyLabel.text = "رنگ: "
-            cell.valueLabel.text = carpets[self.index].color
+            cell.keyLabel.text = "warp.weft.yarn.colon".localized
+            cell.valueLabel.text = carpets[self.index].wrapWeftYarn
         default:
-            cell.keyLabel.text = "نام: "
-            cell.valueLabel.text = carpets[self.index].name
+            return
         }
     }
 }

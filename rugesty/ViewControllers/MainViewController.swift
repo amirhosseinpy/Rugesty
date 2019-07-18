@@ -20,7 +20,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var labelHeightCons: NSLayoutConstraint!
     
-    var listView: UIView!
+//    var listView: UIView!
     var backgroundColoredView: UIView!
     var configuration : ARWorldTrackingConfiguration?
     var carpetNode: SCNNode?
@@ -50,6 +50,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
     var isAdded = false {
         didSet {
             self.slider.isHidden = !self.isAdded
+            self.guideLabel.isHidden = self.isAdded
         }
     }
         
@@ -63,7 +64,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.loadNodeObject()
         self.startSession()
         self.setupBackgroundView()
-        self.setupListView()
+//        self.setupListView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,17 +91,17 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView.automaticallyUpdatesLighting = true
     }
     
-    func setupListView() {
-        self.listView = UIView(frame: CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 340))
-        self.view.addSubview(self.listView)
-//        self.listView.frame.origin.y = -340.0
-        let vc = getList()
-        addChildViewController(vc)
-        vc.view.frame = self.listView.bounds
-        self.listView.addSubview(vc.view)
-        vc.didMove(toParentViewController: self)
-        vc.delegate = self
-    }
+//    func setupListView() {
+//        self.listView = UIView(frame: CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 340))
+//        self.view.addSubview(self.listView)
+////        self.listView.frame.origin.y = -340.0
+//        let vc = getList()
+//        addChildViewController(vc)
+//        vc.view.frame = self.listView.bounds
+//        self.listView.addSubview(vc.view)
+//        vc.didMove(toParentViewController: self)
+//        vc.delegate = self
+//    }
     
     func setupBackgroundView() {
         self.backgroundColoredView = UIView(frame: self.view.bounds)
@@ -159,7 +160,12 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func trackingIsInNormalMode() {
+        if self.isAdded {
         self.guideLabel.isHidden = true
+        } else {
+            self.guideLabel.text = "flatten.rug".localized
+            self.labelHeightCons.constant = "flatten.rug".localized.estimatedWidth(withConstrainedHeight: 25, font: Fonts.iranSans(15)) + 10
+        }
         self.addButton.isHidden = false
     }
     
@@ -168,7 +174,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.labelHeightCons.constant = "walk.arround".localized.estimatedWidth(withConstrainedHeight: 25, font: Fonts.iranSans(15)) + 10
         self.guideLabel.isHidden = false
         self.addButton.isHidden = true
-        Helper.fadeViewInThenOut(view: self.guideLabel, delay: 0.5)
+//        Helper.fadeViewInThenOut(view: self.guideLabel, delay: 0.5)
     }
 
     
@@ -199,13 +205,19 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
                 case 0:
                     newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
                 case 1:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
+                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+//                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
                 case 2:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.86, 0.86, 0.86)
+                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+//                    newLampNode.childNodes[0].scale = SCNVector3(0.86, 0.86, 0.86)
                 case 3:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
+                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+//                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
                 case 4:
-                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+//                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                case 5:
+                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
                 default:
                     return
                 }
@@ -247,6 +259,25 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         let lightNode = getLightNode(position: position)
         node.addChildNode(lightNode)
         lightNodes.append(lightNode)
+    }
+    
+    func onItemSelected() {
+        self.carpetNode?.childNodes[0].geometry?.firstMaterial?.diffuse.contents = Helper.images[Helper.selectedIndex]
+        
+        if self.sceneView.scene.rootNode.childNodes.count > 3, self.isAdded {
+            guard let lastNode = self.sceneView.scene.rootNode.childNodes.last else {
+                return
+            }
+            
+            let position = lastNode.position
+            
+            for _ in 4...self.sceneView.scene.rootNode.childNodes.count {
+                self.sceneView.scene.rootNode.childNodes.last?.removeFromParentNode()
+            }
+            
+            //            self.sceneView.scene.rootNode.childNodes[3].removeFromParentNode()
+            self.addNodeAtLocation(location: position)
+        }
     }
     
     //MARK: - Action
@@ -294,15 +325,20 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func onNewProductTapped(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.7, animations: {
-            self.listView.frame.origin.y -= 340
-            self.chosingMode = true
-        })
+        let vc = getList()
+        vc.onItemSelected = {
+            self.onItemSelected()
+        }
+        vc.present(to: self)
+//        UIView.animate(withDuration: 0.7, animations: {
+////            self.listView.frame.origin.y -= 340
+//            self.chosingMode = true
+//        })
     }
     
     @objc func onBackgroundTapped() {
         UIView.animate(withDuration: 0.7, animations: {
-            self.listView.frame.origin.y += 340
+//            self.listView.frame.origin.y += 340
             self.chosingMode = false
         })
     }
@@ -399,21 +435,5 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
 extension MainViewController: ListViewContrllerDelegate {
     func itemDidChose() {
         self.onBackgroundTapped()
-        self.carpetNode?.childNodes[0].geometry?.firstMaterial?.diffuse.contents = Helper.images[Helper.selectedIndex]
-        
-        if self.sceneView.scene.rootNode.childNodes.count > 3, self.isAdded {
-            guard let lastNode = self.sceneView.scene.rootNode.childNodes.last else {
-                return
-            }
-            
-            let position = lastNode.position
-            
-            for _ in 4...self.sceneView.scene.rootNode.childNodes.count {
-                self.sceneView.scene.rootNode.childNodes.last?.removeFromParentNode()
-            }
-            
-//            self.sceneView.scene.rootNode.childNodes[3].removeFromParentNode()
-            self.addNodeAtLocation(location: position)
-        }
     }
 }

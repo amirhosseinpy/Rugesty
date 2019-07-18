@@ -14,7 +14,7 @@ class Helper {
     static var selectedIndex: Int = 0
     
     static func setupImages() {
-        for i in 1...5 {
+        for i in 1...6 {
             if let image = UIImage(named: "carpet_\(i)") {
                 Helper.images.append(image)
             }

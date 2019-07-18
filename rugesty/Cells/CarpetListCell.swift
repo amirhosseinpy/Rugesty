@@ -12,6 +12,6 @@ class CarpetListCell: UICollectionViewCell {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var carpetImageView: UIImageView!
     @IBOutlet weak var detailButton: UIButton!
-    @IBOutlet weak var priceButton: UIButton!
+//    @IBOutlet weak var priceLabel: UILabel!
     
 }

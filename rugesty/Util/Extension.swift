@@ -78,4 +78,52 @@ extension String {
             in: CharacterSet.whitespacesAndNewlines
         )
     }
+    
+    func inPersianNumbers() -> String {
+        var outStr = self
+        
+        //convert English numbers to Persian
+        outStr = outStr.replacingOccurrences(of: "0", with: "۰")
+        outStr = outStr.replacingOccurrences(of: "1", with: "۱")
+        outStr = outStr.replacingOccurrences(of: "2", with: "۲")
+        outStr = outStr.replacingOccurrences(of: "3", with: "۳")
+        outStr = outStr.replacingOccurrences(of: "4", with: "۴")
+        outStr = outStr.replacingOccurrences(of: "5", with: "۵")
+        outStr = outStr.replacingOccurrences(of: "6", with: "۶")
+        outStr = outStr.replacingOccurrences(of: "7", with: "۷")
+        outStr = outStr.replacingOccurrences(of: "8", with: "۸")
+        outStr = outStr.replacingOccurrences(of: "9", with: "۹")
+        
+        //convert Arabic numbers to Persian
+        outStr = outStr.replacingOccurrences(of: "٠", with: "۰")
+        outStr = outStr.replacingOccurrences(of: "١", with: "۱")
+        outStr = outStr.replacingOccurrences(of: "٢", with: "۲")
+        outStr = outStr.replacingOccurrences(of: "٣", with: "۳")
+        outStr = outStr.replacingOccurrences(of: "٤", with: "۴")
+        outStr = outStr.replacingOccurrences(of: "٥", with: "۵")
+        outStr = outStr.replacingOccurrences(of: "٦", with: "۶")
+        outStr = outStr.replacingOccurrences(of: "٧", with: "۷")
+        outStr = outStr.replacingOccurrences(of: "٨", with: "۸")
+        outStr = outStr.replacingOccurrences(of: "٩", with: "۹")
+        
+        return outStr
+    }
+    
+    func setTomanFormat() -> String {
+        let numberFormatter = NumberFormatter()
+        
+        numberFormatter.locale = Locale(identifier: "en")
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.allowsFloats = false
+        numberFormatter.maximumFractionDigits = 0
+        numberFormatter.groupingSeparator = "٬"
+        
+        let str = numberFormatter.string(from: NSNumber(value: Double(self) ?? 0)) ?? "0"
+        
+        return "\(str)".inPersianNumbers()
+    }
+    
+    func setTomanFormatWithToman() -> String {
+        return self.setTomanFormat() + " " + "toman".localized
+    }
 }

@@ -6,4 +6,15 @@
   Copyright © 1397 amirhosseinpy. All rights reserved.
 */
 
-"walk.arround" = "یکم در محیط بگردید";
+"walk.arround" = "Walk Arround";
+"flatten.rug" = "Please flatten the rug by tapping on screen";
+"toman" = "Toman";
+
+"design.number.colon" = "Design Number:";
+"background.color.colon" = "Background Color:";
+"number.of.color.colon" = "Number Of Colors:";
+"density.colon" = "Density:";
+"pile.yarn.colon" = "Pile Yarn:";
+"warp.weft.yarn.colon" = "Warp & Weft Yarn:";
+
+"colors" = "%@ Colors";

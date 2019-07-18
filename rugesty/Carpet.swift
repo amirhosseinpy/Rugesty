@@ -12,63 +12,73 @@ import UIKit
 class Carpet {
     var id: String?
     var image: UIImage?
-    var name: String?
-    var size: String?
-    var texturePlace: String?
+    var designNo: String?
     var density: String?
-    var material: String?
-    var color: String?
+    var backgroundColor: String?
+    var numberOfColors: Int?
+    var pileYarn: String?
+    var wrapWeftYarn: String?
     
     static func setupCarpets() -> [Carpet] {
         var carpets: [Carpet] = []
         let carpet1 = Carpet()
         carpet1.image = UIImage(named: "carpet_1")
-        carpet1.name = "فرش روستایی"
-        carpet1.size = "۱۳۵ * ۲۰۳"
-        carpet1.texturePlace = "فراهان"
-        carpet1.density = "۱۰ گره در ۷ سانتی متر"
-        carpet1.material = "نخ و پشم"
-        carpet1.color = "کرم - سرمه ای"
+        carpet1.designNo = "A2"
+        carpet1.backgroundColor = "Black"
+        carpet1.numberOfColors = 11
+        carpet1.density = "2 560 000 knots/m2"
+        carpet1.pileYarn = "Tencel®-v"
+        carpet1.wrapWeftYarn = "Tencel®-v"
         carpets.append(carpet1)
         
         let carpet2 = Carpet()
         carpet2.image = UIImage(named: "carpet_2")
-        carpet2.name = "فرش پامچال"
-        carpet2.size = "۱۵۰ * ۲۰۰"
-        carpet2.texturePlace = "فارس"
-        carpet2.density = "۴۰ گره در هر ۱۰ سانتی متر"
-        carpet2.material = "پشم"
-        carpet2.color = "سبز"
+        carpet2.designNo = "16006"
+        carpet2.backgroundColor = "Black"
+        carpet2.numberOfColors = 11
+        carpet2.density = "2 560 000 knots/m2"
+        carpet2.pileYarn = "Tencel®-v"
+        carpet2.wrapWeftYarn = "Tencel®-v"
         carpets.append(carpet2)
         
         let carpet3 = Carpet()
         carpet3.image = UIImage(named: "carpet_3")
-        carpet3.name = "فرش بیجار"
-        carpet3.size = "۱۷۳ * ۲۱۳"
-        carpet3.texturePlace = "بیجار"
-        carpet3.density = "۳۹ گره در ۷ سانتی متر"
-        carpet3.material = "نخ و پشم"
-        carpet3.color = "قرمز - سرمه ای"
+        carpet3.designNo = "16010"
+        carpet3.backgroundColor = "White"
+        carpet3.numberOfColors = 11
+        carpet3.density = "2 560 000 knots/m2"
+        carpet3.pileYarn = "Tencel®-v"
+        carpet3.wrapWeftYarn = "Tencel®-v"
         carpets.append(carpet3)
         
         let carpet4 = Carpet()
         carpet4.image = UIImage(named: "carpet_4")
-        carpet4.name = "فرش زرنشان"
-        carpet4.size = "۱۵۱ * ۲۲۲"
-        carpet4.texturePlace = "سنه"
-        carpet4.density = "۵۰ گره در ۷ سانتی متر"
-        carpet4.material = "ابریشم و پشم"
-        carpet4.color = "کرم - ابی"
+        carpet4.designNo = "16006"
+        carpet4.backgroundColor = "Black"
+        carpet4.numberOfColors = 11
+        carpet4.density = "2 560 000 knots/m2"
+        carpet4.pileYarn = "Tencel®-v"
+        carpet4.wrapWeftYarn = "Tencel®-v"
         carpets.append(carpet4)
         
         let carpet5 = Carpet()
         carpet5.image = UIImage(named: "carpet_5")
-        carpet5.name = "فرش رضوان"
-        carpet5.size = "۲۰۰ * ۲۸۸"
-        carpet5.texturePlace =  "قم"
-        carpet5.density = "۷۰ گره در ۷ سانتی متر"
-        carpet5.material = "ابریشم و کتان"
-        carpet5.color = "مشکی"
+        carpet5.designNo = "16019"
+        carpet5.backgroundColor = "Dark Violet"
+        carpet5.numberOfColors = 11
+        carpet5.density = "2 560 000 knots/m2"
+        carpet5.pileYarn = "Tencel®-v"
+        carpet5.wrapWeftYarn = "Tencel®-v"
+        carpets.append(carpet5)
+        
+        let carpet6 = Carpet()
+        carpet5.image = UIImage(named: "carpet_6")
+        carpet6.designNo = "16014"
+        carpet6.backgroundColor = "Dark Blue"
+        carpet6.numberOfColors = 11
+        carpet6.density = "2 560 000 knots/m2"
+        carpet6.pileYarn = "Tencel®-v"
+        carpet6.wrapWeftYarn = "Tencel®-v"
         carpets.append(carpet5)
         return carpets
     }
