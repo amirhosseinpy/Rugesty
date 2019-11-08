@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "66C84BA2210B065E0095AEB0"
-               BuildableName = "Rugesty.app"
-               BlueprintName = "Rugesty"
+               BuildableName = "RM AR.app"
+               BlueprintName = "RM AR"
                ReferencedContainer = "container:Rugesty.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -53,8 +53,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66C84BA2210B065E0095AEB0"
-            BuildableName = "Rugesty.app"
-            BlueprintName = "Rugesty"
+            BuildableName = "RM AR.app"
+            BlueprintName = "RM AR"
             ReferencedContainer = "container:Rugesty.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66C84BA2210B065E0095AEB0"
-            BuildableName = "Rugesty.app"
-            BlueprintName = "Rugesty"
+            BuildableName = "RM AR.app"
+            BlueprintName = "RM AR"
             ReferencedContainer = "container:Rugesty.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "66C84BA2210B065E0095AEB0"
-            BuildableName = "Rugesty.app"
-            BlueprintName = "Rugesty"
+            BuildableName = "RM AR.app"
+            BlueprintName = "RM AR"
             ReferencedContainer = "container:Rugesty.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

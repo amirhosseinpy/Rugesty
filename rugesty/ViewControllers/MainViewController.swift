@@ -123,7 +123,8 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         // get access to scene from scene assets and parse for the lamp model
         let tempScene = SCNScene(named: "art.scnassets/carpet/carpet.dae")!
         self.carpetNode = tempScene.rootNode.childNodes[0]
-        self.carpetNode?.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+//        self.carpetNode?.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+        self.carpetNode?.childNodes[0].scale = SCNVector3(1, 1, 1)
 //        self.carpetNode?.simdScale = simd_float3(1, 1, 1)
         self.carpetNode?.rotation = SCNVector4Make(.pi / 2, 0, 0, 0)
         self.carpetNode?.childNodes[0].geometry?.firstMaterial?.lightingModel = .physicallyBased
@@ -164,14 +165,14 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
         self.guideLabel.isHidden = true
         } else {
             self.guideLabel.text = "flatten.rug".localized
-            self.labelHeightCons.constant = "flatten.rug".localized.estimatedWidth(withConstrainedHeight: 25, font: Fonts.iranSans(15)) + 10
+            self.labelHeightCons.constant = "flatten.rug".localized.estimatedWidth(withConstrainedHeight: 25, font: UIFont.systemFont(ofSize: 15)) + 10
         }
         self.addButton.isHidden = false
     }
     
     func trackingIsNotNormal() {
         self.guideLabel.text = "walk.arround".localized
-        self.labelHeightCons.constant = "walk.arround".localized.estimatedWidth(withConstrainedHeight: 25, font: Fonts.iranSans(15)) + 10
+        self.labelHeightCons.constant = "walk.arround".localized.estimatedWidth(withConstrainedHeight: 25, font: UIFont.systemFont(ofSize: 15)) + 10
         self.guideLabel.isHidden = false
         self.addButton.isHidden = true
 //        Helper.fadeViewInThenOut(view: self.guideLabel, delay: 0.5)
@@ -203,21 +204,23 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
                 newLampNode.position = location
                 switch Helper.selectedIndex {
                 case 0:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+//                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
                 case 1:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
 //                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
                 case 2:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
 //                    newLampNode.childNodes[0].scale = SCNVector3(0.86, 0.86, 0.86)
                 case 3:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
 //                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
                 case 4:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
-//                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+//                    newLampNode.childNodes[0].scale = SCNVector3(1.2, 1.2, 1.2)
                 case 5:
-                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+//                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
                 default:
                     return
                 }

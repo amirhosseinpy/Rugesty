@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2E85677D92B3B03C9AC096FC /* Pods_Rugesty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB2917B02790248A8305BD6 /* Pods_Rugesty.framework */; };
 		52063F8C79471038E457E2C9 /* Pods_RugestyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985FCDB1173CB43610D3116F /* Pods_RugestyTests.framework */; };
-		66369EF021B8474500919C09 /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66369EEF21B8474500919C09 /* IRANSansMobile_Bold.ttf */; };
 		66369EF521B9194600919C09 /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66369EF421B9194600919C09 /* Base.strings */; };
 		66369EF721B91ECD00919C09 /* LangUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66369EF621B91ECD00919C09 /* LangUtil.swift */; };
 		66369EF921B9300A00919C09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66369EF821B9300A00919C09 /* Constants.swift */; };
@@ -22,9 +21,6 @@
 		66C84BB3210B065F0095AEB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C84BB1210B065F0095AEB0 /* LaunchScreen.storyboard */; };
 		66C84BBE210B065F0095AEB0 /* test2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84BBD210B065F0095AEB0 /* test2Tests.swift */; };
 		66C84BC9210B065F0095AEB0 /* test2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84BC8210B065F0095AEB0 /* test2UITests.swift */; };
-		66E26DF921BE917300E8F844 /* IRANSansMobile_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66369EF221B8475900919C09 /* IRANSansMobile_Medium.ttf */; };
-		66E26DFA21BE917600E8F844 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66369EF321B8476300919C09 /* IRANSansMobile.ttf */; };
-		66E26DFB21BE917D00E8F844 /* IRANSansMobile_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66369EF121B8475000919C09 /* IRANSansMobile_Light.ttf */; };
 		66E9F5FC21551DD200146897 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9F5FB21551DD200146897 /* Extension.swift */; };
 		66E9F5FE2155530100146897 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9F5FD2155530100146897 /* DetailCell.swift */; };
 		66E9F6002155532600146897 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9F5FF2155532600146897 /* DetailViewController.swift */; };
@@ -53,15 +49,11 @@
 
 /* Begin PBXFileReference section */
 		33A7D25B1F9E9DE325A0A485 /* Pods_RugestyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RugestyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66369EEF21B8474500919C09 /* IRANSansMobile_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Bold.ttf; sourceTree = "<group>"; };
-		66369EF121B8475000919C09 /* IRANSansMobile_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Light.ttf; sourceTree = "<group>"; };
-		66369EF221B8475900919C09 /* IRANSansMobile_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Medium.ttf; sourceTree = "<group>"; };
-		66369EF321B8476300919C09 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
 		66369EF421B9194600919C09 /* Base.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Base.strings; sourceTree = "<group>"; };
 		66369EF621B91ECD00919C09 /* LangUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangUtil.swift; sourceTree = "<group>"; };
 		66369EF821B9300A00919C09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		668AE4A72154DB13002A09B4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		66C84BA3210B065E0095AEB0 /* Rugesty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rugesty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C84BA3210B065E0095AEB0 /* RM AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RM AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C84BA6210B065E0095AEB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C84BA8210B065E0095AEB0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		66C84BAA210B065E0095AEB0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -135,23 +127,11 @@
 		66369EED21B8470C00919C09 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				66369EEE21B8472C00919C09 /* Fonts */,
 				66C84BAF210B065F0095AEB0 /* Assets.xcassets */,
 				66C84BA8210B065E0095AEB0 /* art.scnassets */,
 				66369EF421B9194600919C09 /* Base.strings */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		66369EEE21B8472C00919C09 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				66369EF221B8475900919C09 /* IRANSansMobile_Medium.ttf */,
-				66369EF321B8476300919C09 /* IRANSansMobile.ttf */,
-				66369EEF21B8474500919C09 /* IRANSansMobile_Bold.ttf */,
-				66369EF121B8475000919C09 /* IRANSansMobile_Light.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		66C84B9A210B065D0095AEB0 = {
@@ -169,7 +149,7 @@
 		66C84BA4210B065E0095AEB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66C84BA3210B065E0095AEB0 /* Rugesty.app */,
+				66C84BA3210B065E0095AEB0 /* RM AR.app */,
 				66C84BB9210B065F0095AEB0 /* RugestyTests.xctest */,
 				66C84BC4210B065F0095AEB0 /* RugestyUITests.xctest */,
 			);
@@ -261,9 +241,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66C84BA2210B065E0095AEB0 /* Rugesty */ = {
+		66C84BA2210B065E0095AEB0 /* RM AR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "Rugesty" */;
+			buildConfigurationList = 66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "RM AR" */;
 			buildPhases = (
 				BD01DCA506256B1425D40C9A /* [CP] Check Pods Manifest.lock */,
 				66C84B9F210B065E0095AEB0 /* Sources */,
@@ -275,9 +255,9 @@
 			);
 			dependencies = (
 			);
-			name = Rugesty;
+			name = "RM AR";
 			productName = test2;
-			productReference = 66C84BA3210B065E0095AEB0 /* Rugesty.app */;
+			productReference = 66C84BA3210B065E0095AEB0 /* RM AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 		66C84BB8210B065F0095AEB0 /* RugestyTests */ = {
@@ -354,7 +334,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66C84BA2210B065E0095AEB0 /* Rugesty */,
+				66C84BA2210B065E0095AEB0 /* RM AR */,
 				66C84BB8210B065F0095AEB0 /* RugestyTests */,
 				66C84BC3210B065F0095AEB0 /* RugestyUITests */,
 			);
@@ -366,13 +346,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66369EF021B8474500919C09 /* IRANSansMobile_Bold.ttf in Resources */,
 				66369EF521B9194600919C09 /* Base.strings in Resources */,
 				66C84BA9210B065E0095AEB0 /* art.scnassets in Resources */,
-				66E26DF921BE917300E8F844 /* IRANSansMobile_Medium.ttf in Resources */,
 				66C84BB3210B065F0095AEB0 /* LaunchScreen.storyboard in Resources */,
-				66E26DFA21BE917600E8F844 /* IRANSansMobile.ttf in Resources */,
-				66E26DFB21BE917D00E8F844 /* IRANSansMobile_Light.ttf in Resources */,
 				66C84BB0210B065F0095AEB0 /* Assets.xcassets in Resources */,
 				66C84BAE210B065E0095AEB0 /* Main.storyboard in Resources */,
 			);
@@ -509,12 +485,12 @@
 /* Begin PBXTargetDependency section */
 		66C84BBB210B065F0095AEB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66C84BA2210B065E0095AEB0 /* Rugesty */;
+			target = 66C84BA2210B065E0095AEB0 /* RM AR */;
 			targetProxy = 66C84BBA210B065F0095AEB0 /* PBXContainerItemProxy */;
 		};
 		66C84BC6210B065F0095AEB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66C84BA2210B065E0095AEB0 /* Rugesty */;
+			target = 66C84BA2210B065E0095AEB0 /* RM AR */;
 			targetProxy = 66C84BC5210B065F0095AEB0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -659,13 +635,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2X4QTZL9V;
+				DEVELOPMENT_TEAM = UGM9RU5T36;
 				INFOPLIST_FILE = rugesty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rminno.rugar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.rug123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -678,13 +654,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2X4QTZL9V;
+				DEVELOPMENT_TEAM = UGM9RU5T36;
 				INFOPLIST_FILE = rugesty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rminno.rugar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.rug123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -789,7 +765,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "Rugesty" */ = {
+		66C84BCD210B065F0095AEB0 /* Build configuration list for PBXNativeTarget "RM AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66C84BCE210B065F0095AEB0 /* Debug */,
