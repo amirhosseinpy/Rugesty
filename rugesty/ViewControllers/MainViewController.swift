@@ -126,6 +126,7 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
 //        self.carpetNode?.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
         self.carpetNode?.childNodes[0].scale = SCNVector3(1, 1, 1)
 //        self.carpetNode?.simdScale = simd_float3(1, 1, 1)
+        
         self.carpetNode?.rotation = SCNVector4Make(.pi / 2, 0, 0, 0)
         self.carpetNode?.childNodes[0].geometry?.firstMaterial?.lightingModel = .physicallyBased
         self.carpetNode?.childNodes[0].geometry?.firstMaterial?.diffuse.contents = Helper.images[Helper.selectedIndex]

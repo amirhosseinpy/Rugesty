@@ -14,13 +14,13 @@
 		66369EF921B9300A00919C09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66369EF821B9300A00919C09 /* Constants.swift */; };
 		668AE4A82154DB13002A09B4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668AE4A72154DB13002A09B4 /* Helper.swift */; };
 		66C84BA7210B065E0095AEB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84BA6210B065E0095AEB0 /* AppDelegate.swift */; };
-		66C84BA9210B065E0095AEB0 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C84BA8210B065E0095AEB0 /* art.scnassets */; };
 		66C84BAB210B065E0095AEB0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84BAA210B065E0095AEB0 /* MainViewController.swift */; };
 		66C84BAE210B065E0095AEB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C84BAC210B065E0095AEB0 /* Main.storyboard */; };
 		66C84BB0210B065F0095AEB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C84BAF210B065F0095AEB0 /* Assets.xcassets */; };
 		66C84BB3210B065F0095AEB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C84BB1210B065F0095AEB0 /* LaunchScreen.storyboard */; };
 		66C84BBE210B065F0095AEB0 /* test2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84BBD210B065F0095AEB0 /* test2Tests.swift */; };
 		66C84BC9210B065F0095AEB0 /* test2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C84BC8210B065F0095AEB0 /* test2UITests.swift */; };
+		66C9CE25239ADB32004D3656 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C84BA8210B065E0095AEB0 /* art.scnassets */; };
 		66E9F5FC21551DD200146897 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9F5FB21551DD200146897 /* Extension.swift */; };
 		66E9F5FE2155530100146897 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9F5FD2155530100146897 /* DetailCell.swift */; };
 		66E9F6002155532600146897 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E9F5FF2155532600146897 /* DetailViewController.swift */; };
@@ -346,8 +346,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C9CE25239ADB32004D3656 /* art.scnassets in Resources */,
 				66369EF521B9194600919C09 /* Base.strings in Resources */,
-				66C84BA9210B065E0095AEB0 /* art.scnassets in Resources */,
 				66C84BB3210B065F0095AEB0 /* LaunchScreen.storyboard in Resources */,
 				66C84BB0210B065F0095AEB0 /* Assets.xcassets in Resources */,
 				66C84BAE210B065E0095AEB0 /* Main.storyboard in Resources */,
@@ -635,13 +635,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UGM9RU5T36;
+				DEVELOPMENT_TEAM = 674895MZDB;
 				INFOPLIST_FILE = rugesty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.rug123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.rug12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -654,13 +654,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UGM9RU5T36;
+				DEVELOPMENT_TEAM = 674895MZDB;
 				INFOPLIST_FILE = rugesty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.rug123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pooya.rug12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
