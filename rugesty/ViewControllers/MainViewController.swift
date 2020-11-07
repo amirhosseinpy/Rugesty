@@ -205,23 +205,23 @@ class MainViewController: UIViewController, ARSCNViewDelegate {
                 newLampNode.position = location
                 switch Helper.selectedIndex {
                 case 0:
-                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
-//                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+//                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                    newLampNode.childNodes[0].scale = SCNVector3(0.58, 0.58, 0.58)
                 case 1:
-                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
-//                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
+//                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
                 case 2:
-                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
-//                    newLampNode.childNodes[0].scale = SCNVector3(0.86, 0.86, 0.86)
+//                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                    newLampNode.childNodes[0].scale = SCNVector3(1.04, 1.04, 1.04)
                 case 3:
-                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
-//                    newLampNode.childNodes[0].scale = SCNVector3(0.75, 0.75, 0.75)
+//                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                    newLampNode.childNodes[0].scale = SCNVector3(0.85, 0.85, 0.85)
                 case 4:
-                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
-//                    newLampNode.childNodes[0].scale = SCNVector3(1.2, 1.2, 1.2)
+//                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                    newLampNode.childNodes[0].scale = SCNVector3(1.2, 1.2, 1.2)
                 case 5:
-                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
-//                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
+//                    newLampNode.childNodes[0].scale = SCNVector3(1, 1, 1)
+                    newLampNode.childNodes[0].scale = SCNVector3(0.67, 0.67, 0.67)
                 default:
                     return
                 }
